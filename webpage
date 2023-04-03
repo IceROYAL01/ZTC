@@ -1,0 +1,577 @@
+<!doctype html>
+<html data-n-head-ssr>
+  <head >
+    <title>ZETDC Self Service Portal</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="Self service portal"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/logo.png"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><style data-n-head="ssr" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+.v-application .primary--text {
+  color: #1976d2;
+  caret-color: #1976d2;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff;
+  border-color: #c7fdff;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff;
+  caret-color: #c7fdff;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff;
+  border-color: #a8e0ff;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff;
+  caret-color: #a8e0ff;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff;
+  border-color: #8ac5ff;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff;
+  caret-color: #8ac5ff;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff;
+  border-color: #6aaaff;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff;
+  caret-color: #6aaaff;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef;
+  border-color: #488fef;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef;
+  caret-color: #488fef;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6;
+  border-color: #005eb6;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6;
+  caret-color: #005eb6;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b;
+  border-color: #00479b;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b;
+  caret-color: #00479b;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180;
+  border-color: #003180;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180;
+  caret-color: #003180;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67;
+  border-color: #001e67;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67;
+  caret-color: #001e67;
+}
+.v-application .secondary {
+  background-color: #424242;
+  border-color: #424242;
+}
+.v-application .secondary--text {
+  color: #424242;
+  caret-color: #424242;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1;
+  border-color: #c1c1c1;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1;
+  caret-color: #c1c1c1;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6;
+  caret-color: #a6a6a6;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b;
+  border-color: #8b8b8b;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b;
+  caret-color: #8b8b8b;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272;
+  border-color: #727272;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272;
+  caret-color: #727272;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959;
+  border-color: #595959;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959;
+  caret-color: #595959;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c;
+  border-color: #2c2c2c;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c;
+  caret-color: #2c2c2c;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717;
+  border-color: #171717;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717;
+  caret-color: #171717;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000;
+  border-color: #000000;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000;
+  caret-color: #000000;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000;
+  border-color: #000000;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000;
+  caret-color: #000000;
+}
+.v-application .accent {
+  background-color: #82b1ff;
+  border-color: #82b1ff;
+}
+.v-application .accent--text {
+  color: #82b1ff;
+  caret-color: #82b1ff;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff;
+  caret-color: #ffffff;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff;
+  border-color: #f8ffff;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff;
+  caret-color: #f8ffff;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff;
+  border-color: #daffff;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff;
+  caret-color: #daffff;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff;
+  border-color: #bce8ff;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff;
+  caret-color: #bce8ff;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff;
+  border-color: #9fccff;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff;
+  caret-color: #9fccff;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2;
+  border-color: #6596e2;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2;
+  caret-color: #6596e2;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6;
+  border-color: #467dc6;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6;
+  caret-color: #467dc6;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa;
+  border-color: #2364aa;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa;
+  caret-color: #2364aa;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90;
+  border-color: #004c90;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90;
+  caret-color: #004c90;
+}
+.v-application .error {
+  background-color: #ff5252;
+  border-color: #ff5252;
+}
+.v-application .error--text {
+  color: #ff5252;
+  caret-color: #ff5252;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5;
+  border-color: #ffe4d5;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5;
+  caret-color: #ffe4d5;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9;
+  border-color: #ffc6b9;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9;
+  caret-color: #ffc6b9;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e;
+  border-color: #ffa99e;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e;
+  caret-color: #ffa99e;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84;
+  border-color: #ff8c84;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84;
+  caret-color: #ff8c84;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a;
+  border-color: #ff6f6a;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a;
+  caret-color: #ff6f6a;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b;
+  border-color: #df323b;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b;
+  caret-color: #df323b;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025;
+  border-color: #bf0025;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025;
+  caret-color: #bf0025;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010;
+  border-color: #9f0010;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010;
+  caret-color: #9f0010;
+}
+.v-application .error.darken-4 {
+  background-color: #800000;
+  border-color: #800000;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000;
+  caret-color: #800000;
+}
+.v-application .info {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+.v-application .info--text {
+  color: #2196f3;
+  caret-color: #2196f3;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff;
+  border-color: #d4ffff;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff;
+  caret-color: #d4ffff;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff;
+  border-color: #b5ffff;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff;
+  caret-color: #b5ffff;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff;
+  border-color: #95e8ff;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff;
+  caret-color: #95e8ff;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff;
+  border-color: #75ccff;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff;
+  caret-color: #75ccff;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff;
+  border-color: #51b0ff;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff;
+  caret-color: #51b0ff;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6;
+  border-color: #007cd6;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6;
+  caret-color: #007cd6;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba;
+  border-color: #0064ba;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba;
+  caret-color: #0064ba;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f;
+  border-color: #004d9f;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f;
+  caret-color: #004d9f;
+}
+.v-application .info.darken-4 {
+  background-color: #003784;
+  border-color: #003784;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784;
+  caret-color: #003784;
+}
+.v-application .success {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+.v-application .success--text {
+  color: #4caf50;
+  caret-color: #4caf50;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6;
+  border-color: #dcffd6;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6;
+  caret-color: #dcffd6;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba;
+  border-color: #beffba;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba;
+  caret-color: #beffba;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e;
+  border-color: #a2ff9e;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e;
+  caret-color: #a2ff9e;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783;
+  border-color: #85e783;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783;
+  caret-color: #85e783;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69;
+  border-color: #69cb69;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69;
+  caret-color: #69cb69;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437;
+  border-color: #2d9437;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437;
+  caret-color: #2d9437;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e;
+  border-color: #00791e;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e;
+  caret-color: #00791e;
+}
+.v-application .success.darken-3 {
+  background-color: #006000;
+  border-color: #006000;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000;
+  caret-color: #006000;
+}
+.v-application .success.darken-4 {
+  background-color: #004700;
+  border-color: #004700;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700;
+  caret-color: #004700;
+}
+.v-application .warning {
+  background-color: #fb8c00;
+  border-color: #fb8c00;
+}
+.v-application .warning--text {
+  color: #fb8c00;
+  caret-color: #fb8c00;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e;
+  border-color: #ffff9e;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e;
+  caret-color: #ffff9e;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82;
+  border-color: #fffb82;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82;
+  caret-color: #fffb82;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67;
+  border-color: #ffdf67;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67;
+  caret-color: #ffdf67;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b;
+  border-color: #ffc24b;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b;
+  caret-color: #ffc24b;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d;
+  border-color: #ffa72d;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d;
+  caret-color: #ffa72d;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200;
+  border-color: #db7200;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200;
+  caret-color: #db7200;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900;
+  border-color: #bb5900;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900;
+  caret-color: #bb5900;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000;
+  border-color: #9d4000;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000;
+  caret-color: #9d4000;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700;
+  border-color: #802700;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700;
+  caret-color: #802700;
+}
+.v-application .theme {
+  background-color: undefined;
+  border-color: undefined;
+}
+.v-application .theme--text {
+  color: undefined;
+  caret-color: undefined;
+}</style><link rel="preload" href="/_nuxt/85e7b4705280899d53ce.js" as="script"><link rel="preload" href="/_nuxt/311d0fb2df728ae189c9.js" as="script"><link rel="preload" href="/_nuxt/1325ddf07f97406efd8c.css" as="style"><link rel="preload" href="/_nuxt/e69f23870bd23cadff8c.js" as="script"><link rel="preload" href="/_nuxt/dab7aca24e3a1221a8da.css" as="style"><link rel="preload" href="/_nuxt/69fb653bfe8b90473da7.js" as="script"><link rel="preload" href="/_nuxt/c2d931ceafa2f3dec7fc.css" as="style"><link rel="preload" href="/_nuxt/41ee3363525b4ca4df54.js" as="script"><link rel="stylesheet" href="/_nuxt/1325ddf07f97406efd8c.css"><link rel="stylesheet" href="/_nuxt/dab7aca24e3a1221a8da.css"><link rel="stylesheet" href="/_nuxt/c2d931ceafa2f3dec7fc.css">
+  </head>
+  <body >
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light" data-v-7ca8984a><div class="v-application--wrap"><header class="v-sheet v-sheet--tile theme--dark v-toolbar indigo" style="min-height:80px;max-height:80px;min-width:100px;overflow:auto;" data-v-7ca8984a><div class="v-toolbar__content" style="height:64px;"><a href="/" target="_self" data-v-7ca8984a><img src="/logo.png" alt="ZETDC" width="60" height="60" data-v-7ca8984a></a> <div class="v-toolbar__title head" data-v-7ca8984a>ZETDC Self Service Portal</div> <div class="spacer" data-v-7ca8984a></div> <div class="v-toolbar__items" data-v-7ca8984a><img src="/pay.png" height="100" width="180" alt="payment" exact="" style="cursor:pointer;" data-v-7ca8984a> <button type="button" class="v-btn v-btn--flat v-btn--text theme--dark v-size--default" data-v-7ca8984a><span class="v-btn__content">Prepaid Units check</span></button> <button type="button" class="v-btn v-btn--flat v-btn--text theme--dark v-size--default" data-v-7ca8984a><span class="v-btn__content">View Token</span></button> <button type="button" class="v-btn v-btn--flat v-btn--text theme--dark v-size--default" data-v-7ca8984a><span class="v-btn__content">Track Application</span></button> <button type="button" class="v-btn v-btn--flat v-btn--text theme--dark v-size--default" data-v-7ca8984a><span class="v-btn__content">Track Fault</span></button> <button type="button" class="v-btn v-btn--flat v-btn--text theme--dark v-size--default" data-v-7ca8984a><span class="v-btn__content">New Application</span></button> <span class="v-tooltip v-tooltip--bottom" data-v-7ca8984a><div data-v-7ca8984a="" class="v-tooltip__content" style="left:0px;max-width:auto;opacity:0;top:12px;z-index:0;display:none;"></div><i role="button" title="help" class="v-icon notranslate v-icon--link material-icons theme--dark" data-v-7ca8984a>help</i></span></div></div></header> <main class="v-content" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-7ca8984a><div class="v-content__wrap"><div class="container" data-v-7ca8984a><div id="pageDashboard" data-v-27471495 data-v-7ca8984a><marquee style="color:yellow;" data-v-27471495><h1 data-v-27471495>You can now Pay your Postpaid bills and New Connection fees online.  <a href="/paybill" style="color:white;" data-v-27471495>Click Here to pay</a></h1></marquee> <div class="v-window v-item-group theme--dark v-window--show-arrows-on-hover v-carousel v-carousel--hide-delimiter-background" style="height:100px;margin-top:20px;border-radius:20px;margin-bottom:20px;" data-v-27471495><div class="v-window__container" style="height:100;"><div class="v-window-item" data-v-27471495><div class="v-responsive v-image v-carousel__item" style="height:100px;"><div class="v-responsive__content"><div class="v-sheet theme--dark indigo" style="height:100%;" data-v-27471495><div class="row align-center justify-center" data-v-27471495><div style="padding:20px;" data-v-27471495><h1 data-v-27471495><cite data-v-27471495>You can now track your faults online.</cite></h1></div></div></div></div></div></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window-item" style="display:none;" data-v-27471495></div><div class="v-window__prev"><button type="button" aria-label="Previous visual" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-left theme--dark" style="font-size:36px;"></i></span></button></div><div class="v-window__next"><button type="button" aria-label="Next visual" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--dark" style="font-size:36px;"></i></span></button></div></div></div> <div class="elevation-1 pa-3 login-card v-card v-sheet theme--light" style="min-width:300px;" data-v-27471495><div tabindex="0" aria-label="Loading" class="vld-overlay is-active is-full-page" style="z-index:999;display:none;" data-v-27471495><div class="vld-background" style="background:#ffffff;opacity:0.5;"></div><div class="vld-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="110" width="110" fill="blue"><rect x="0" y="13" width="4" height="5"><animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s" repeatCount="indefinite"></animate><animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s" repeatCount="indefinite"></animate></rect><rect x="10" y="13" width="4" height="5"><animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate><animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate></rect><rect x="20" y="13" width="4" height="5"><animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate><animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate></rect></svg></div></div> <div class="v-card__text" data-v-27471495><div class="layout column align-center" data-v-27471495><h2 style="font-family:'Gill Sans', Arial, Helvetica, sans-serif;" data-v-27471495><i data-v-27471495>Login</i></h2></div> <form novalidate="novalidate" class="v-form" data-v-27471495><div class="v-input theme--light v-text-field" data-v-27471495><div class="v-input__control"><div class="v-input__slot"><div class="v-text-field__slot"><label for="input-30936101" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">Username</label><input name="login" id="input-30936101" type="text" value=""></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate material-icons theme--light">person</i></div></div></div><div class="v-text-field__details"><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div> <div class="v-input theme--light v-text-field" data-v-27471495><div class="v-input__control"><div class="v-input__slot"><div class="v-text-field__slot"><label for="password" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">Password</label><input name="password" required="required" id="password" type="password" value=""></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate material-icons theme--light">lock</i></div></div></div><div class="v-text-field__details"><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></form></div> <div class="login-btn" style="margin-bottom:10px;" data-v-27471495><div class="spacer" data-v-27471495></div> <button type="button" class="v-btn v-btn--block v-btn--contained theme--light v-size--default primary" data-v-27471495><span class="v-btn__content">Login</span></button></div> <a href="/register" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light v-size--small indigo--text" data-v-27471495><span class="v-btn__content">REGISTER</span></a> <a href="/forgotpassword" data-v-27471495>Forgot Password?</a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=(function(a){return {layout:"auth",data:[{}],error:a,state:{auth:a},serverRendered:true}}(null));</script><script src="/_nuxt/85e7b4705280899d53ce.js" defer></script><script src="/_nuxt/41ee3363525b4ca4df54.js" defer></script><script src="/_nuxt/311d0fb2df728ae189c9.js" defer></script><script src="/_nuxt/e69f23870bd23cadff8c.js" defer></script><script src="/_nuxt/69fb653bfe8b90473da7.js" defer></script>
+  </body>
+</html>
